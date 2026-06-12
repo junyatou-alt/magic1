@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="theme-color" content="#BA55D3" />
+    <link rel="manifest" href="./manifest.json" />
+    <link rel="icon" type="image/x-icon" href="./favicon.ico" />
+    <title>皇家魔法日历</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('./sw.js')
+            .then((registration) => {
+              console.log('✨ 皇家魔法守护 Service Worker 激活契约:', registration.scope);
+            })
+            .catch((error) => {
+              console.warn('❌ Service Worker 注册失败:', error);
+            });
+        });
+      }
+    </script>
+  </body>
+</html>
+

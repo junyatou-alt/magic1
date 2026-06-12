@@ -1,0 +1,6 @@
+{
+  "name": "Royal Magic Calendar",
+  "description": "A princess-themed magical calendar and daily task manager for children, utilizing crystal rewards and custom rules to encourage habit-building and routine cultivation.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

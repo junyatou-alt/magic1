@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quicksand:wght@300..700&display=swap');
+@import "tailwindcss";
+
+:root {
+  --p-pink: #FFB6C1;
+  --m-purple: #BA55D3;
+  --s-gold: #FFD700;
+  --i-white: #FFF0F5;
+  --c-red: #FFE4E1;
+}
+
+@theme {
+  --font-sans: "Quicksand", "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", Georgia, serif;
+  --color-brand-pink: var(--p-pink);
+  --color-brand-purple: var(--m-purple);
+  --color-brand-gold: var(--s-gold);
+}
+
+/* Lace borders resembling a majestic princess look */
+.lace-border {
+  border: 4px double var(--s-gold);
+  box-shadow: 0 0 0 2px var(--p-pink);
+}
+
+/* Glassmorphism for containers and control panels */
+.magic-glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 215, 0, 0.3);
+}
+
+/* Conflict overlay styling with shake animation */
+.conflict-zone {
+  background: repeating-linear-gradient(45deg, var(--c-red), var(--c-red) 10px, #ffffff 10px, #ffffff 20px);
+  opacity: 0.9;
+  border: 2px solid #FF8080;
+}
+
+/* Custom styles for high fidelity magic animations and overlays */
+@keyframes sparkle {
+  0%, 100% { opacity: 0.2; transform: scale(0.8) rotate(0deg); }
+  50% { opacity: 1; transform: scale(1.2) rotate(180deg); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}
+
+@keyframes conflict-shake {
+  0%, 100% { transform: translateX(0); }
+  20%, 60% { transform: translateX(-2px); }
+  40%, 80% { transform: translateX(2px); }
+}
+
+.animate-pulse-magic {
+  animation: sparkle 2s infinite ease-in-out;
+}
+
+.animate-float-magic {
+  animation: float 3s infinite ease-in-out;
+}
+
+.animate-shake-magic {
+  animation: conflict-shake 0.4s infinite ease-in-out;
+}
+
+/* Scrollbar customizations for a elegant royal scroll look */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--i-white);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--p-pink);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--m-purple);
+}
+
